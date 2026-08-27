@@ -1,5 +1,7 @@
 import { BusinessInfo, BusinessDayHours, SweetCategory, CustomerReview, GalleryItem } from '../types';
 import shopCounterImage from '../assets/images/gopal_sweets_counter_1787842684303.jpg';
+import sweetShopFrontImage from '../assets/images/sweet_shop_front_1787856802329.jpg';
+import sweetShopStoreImage from '../assets/images/sweet_shop_store_1787856818608.jpg';
 import gulabJamunImage from '../assets/images/gulab_jamun_special_1787852446365.jpg';
 import kajuKatliBarfiImage from '../assets/images/kaju_katli_barfi_1787852477135.jpg';
 import motichoorLadduImage from '../assets/images/motichoor_laddu_platter_1787852496333.jpg';
@@ -26,6 +28,8 @@ export const BUSINESS_INFO: BusinessInfo = {
   googleMapsDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=181,+93/4+Old+Calcutta+Rd,+Anandapuri,+Barrackpore,+West+Bengal+700122,+India',
   googleSearchReviewsUrl: 'https://www.google.com/maps/search/?api=1&query=Gopal+Sweets+Barrackpore+reviews',
   upiId: '7439427696@upi',
+  shopImage: sweetShopFrontImage,
+  storefrontImage: sweetShopStoreImage,
 };
 
 export const BUSINESS_HOURS: BusinessDayHours[] = [
@@ -326,9 +330,23 @@ export const SWEET_CATEGORIES: SweetCategory[] = [
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
+    id: 'g-shop-front',
+    title: 'Gopal Sweets Storefront & Entrance',
+    category: 'Sweet Shop',
+    image: sweetShopFrontImage,
+    alt: 'Gopal Sweets authentic shopfront and welcoming entrance in Barrackpore, West Bengal',
+  },
+  {
+    id: 'g-shop-store',
+    title: 'Sweet Display Counters & Daily Varieties',
+    category: 'Sweet Shop',
+    image: sweetShopStoreImage,
+    alt: 'Clean glass display counter at Gopal Sweets filled with fresh Bengali sweets, laddus, and barfis',
+  },
+  {
     id: 'g0',
     title: 'Gopal Sweets Store Counter & Fresh Trays',
-    category: 'Bengali Sweets',
+    category: 'Sweet Shop',
     image: shopCounterImage,
     alt: 'Authentic shop counter at Gopal Sweets in Barrackpore displaying fresh Sandesh, Barfi, and Laddu trays',
   },

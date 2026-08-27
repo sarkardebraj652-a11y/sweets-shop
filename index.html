@@ -17,13 +17,13 @@
     <meta property="og:type" content="business.business" />
     <meta property="og:url" content="https://gopalsweets.com/" />
     <meta property="og:title" content="Gopal Sweets Barrackpore | Indian Sweets & Snacks" />
-    <meta property="og:description" content="Visit Gopal Sweets in Barrackpore, West Bengal for traditional Indian sweets and snacks. Find our location, contact details, customer reviews and more." />
+    <meta property="og:description" content="Visit Gopal Sweets in Barrackpore, West Bengal for fresh Bengali sweets, Rasgulla, Sandesh, Kaju Katli, and hot crispy samosas. Find location, hours, menu and online ordering." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?q=80&w=1200&auto=format&fit=crop" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="Gopal Sweets Barrackpore | Indian Sweets & Snacks" />
-    <meta property="twitter:description" content="Visit Gopal Sweets in Barrackpore, West Bengal for traditional Indian sweets and snacks. Find our location, contact details, customer reviews and more." />
+    <meta property="twitter:description" content="Visit Gopal Sweets in Barrackpore, West Bengal for fresh Bengali sweets, Rasgulla, Sandesh, Kaju Katli, and hot crispy samosas. Find location, hours, menu and online ordering." />
     <meta property="twitter:image" content="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?q=80&w=1200&auto=format&fit=crop" />
 
     <!-- Google Fonts: Marcellus & Plus Jakarta Sans -->
@@ -31,16 +31,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
 
-    <!-- LocalBusiness Schema (JSON-LD) -->
+    <!-- LocalBusiness Sweet Shop Schema (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Bakery",
+      "@type": ["Bakery", "FoodEstablishment", "Store"],
+      "@id": "https://gopalsweets.com/#sweetshop",
       "name": "Gopal Sweets",
-      "description": "Traditional Indian sweets and popular snacks sweet shop located in Barrackpore, West Bengal.",
-      "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?q=80&w=1200&auto=format&fit=crop",
+      "alternateName": "Gopal Sweets Barrackpore",
+      "description": "Authentic traditional Indian sweet shop and snack confectioner located in Anandapuri, Barrackpore, West Bengal. Serving fresh Bengali Chhena Rosogolla, Sandesh, Gulab Jamun, Kaju Katli, and hot tea-time samosas.",
+      "image": [
+        "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "url": "https://gopalsweets.com/",
       "telephone": "+91 74394 27696",
       "email": "gopalsweets1990@gmail.com",
+      "priceRange": "₹50 - ₹500",
+      "servesCuisine": ["Bengali", "Indian", "Sweets", "Vegetarian", "Snacks"],
+      "hasMenu": "https://gopalsweets.com/#sweets-snacks",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "181, 93/4 Old Calcutta Rd, Anandapuri",
@@ -48,6 +58,11 @@
         "addressRegion": "West Bengal",
         "postalCode": "700122",
         "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.7667,
+        "longitude": 88.3667
       },
       "sameAs": [
         "https://www.instagram.com/gopalsweets.1990/"

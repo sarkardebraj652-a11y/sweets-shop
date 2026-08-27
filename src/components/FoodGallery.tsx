@@ -7,7 +7,7 @@ export const FoodGallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [activeModalItem, setActiveModalItem] = useState<GalleryItem | null>(null);
 
-  const categories = ['All', 'Bengali Sweets', 'Indian Sweets', 'Snacks', 'Special Occasion'];
+  const categories = ['All', 'Sweet Shop', 'Bengali Sweets', 'Indian Sweets', 'Snacks', 'Special Occasion'];
 
   const filteredItems = selectedCategory === 'All'
     ? GALLERY_ITEMS

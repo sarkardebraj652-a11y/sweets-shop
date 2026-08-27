@@ -1,9 +1,36 @@
-import React from 'react';
-import { Heart, MapPin, Coffee, ShoppingBag, ShieldCheck, Store } from 'lucide-react';
+import React, { useState } from 'react';
+import { Heart, MapPin, Coffee, ShoppingBag, Store, Sparkles, Building2 } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
 import shopCounterImage from '../assets/images/gopal_sweets_counter_1787842684303.jpg';
+import sweetShopFrontImage from '../assets/images/sweet_shop_front_1787856802329.jpg';
+import sweetShopStoreImage from '../assets/images/sweet_shop_store_1787856818608.jpg';
 
 export const AboutSection: React.FC = () => {
+  const [activePhoto, setActivePhoto] = useState<'front' | 'counter' | 'store'>('front');
+
+  const photos = {
+    front: {
+      image: sweetShopFrontImage,
+      title: 'Sweet Shop Storefront',
+      badge: 'Gopal Sweets Entrance • Barrackpore',
+      alt: 'Gopal Sweets sweet shop storefront and welcoming entrance in Barrackpore West Bengal',
+    },
+    counter: {
+      image: shopCounterImage,
+      title: 'Fresh Sweets Counter',
+      badge: 'Daily Fresh Mithai Trays',
+      alt: 'Gopal Sweets shop display counter in Barrackpore with sweet trays and counter shelves',
+    },
+    store: {
+      image: sweetShopStoreImage,
+      title: 'Sweet Display Shelves',
+      badge: 'Chhena & Mawa Delights',
+      alt: 'Glass display counters inside Gopal Sweets sweet shop showing traditional sweets and packaging',
+    },
+  };
+
+  const current = photos[activePhoto];
+
   return (
     <section id="about" className="py-16 md:py-24 bg-[#FCF9F2] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,31 +49,76 @@ export const AboutSection: React.FC = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Left Column: Visual Storytelling */}
+          {/* Left Column: Visual Storytelling & Sweet Shop Photos */}
           <div className="lg:col-span-5 order-2 lg:order-1">
-            <div className="relative">
+            <div className="relative space-y-4">
+              
+              {/* Main Photo Card */}
               <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-[#F5ECDF] relative group">
                 <img
-                  src={shopCounterImage}
-                  alt="Gopal Sweets shop display counter in Barrackpore with sweet trays and counter shelves"
+                  src={current.image}
+                  alt={current.alt}
                   className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 left-3 bg-[#8B1D24]/90 backdrop-blur-xs text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-amber-300/30 flex items-center gap-1.5 shadow">
                   <Store className="w-3.5 h-3.5 text-amber-300" />
-                  <span>Our Shop Counter in Barrackpore</span>
+                  <span>{current.badge}</span>
                 </div>
               </div>
 
+              {/* Sweet Shop Photo Selector Tabs */}
+              <div className="flex items-center justify-between gap-2 p-1.5 bg-[#F2E5D5] rounded-2xl border border-[#E3D3C1]">
+                <button
+                  type="button"
+                  id="about-photo-front-btn"
+                  onClick={() => setActivePhoto('front')}
+                  className={`flex-1 py-1.5 px-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
+                    activePhoto === 'front'
+                      ? 'bg-[#8B1D24] text-white shadow-xs'
+                      : 'text-[#5C3F2E] hover:bg-white/60'
+                  }`}
+                >
+                  <Building2 className="w-3 h-3" />
+                  <span>Storefront</span>
+                </button>
+                <button
+                  type="button"
+                  id="about-photo-counter-btn"
+                  onClick={() => setActivePhoto('counter')}
+                  className={`flex-1 py-1.5 px-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
+                    activePhoto === 'counter'
+                      ? 'bg-[#8B1D24] text-white shadow-xs'
+                      : 'text-[#5C3F2E] hover:bg-white/60'
+                  }`}
+                >
+                  <Store className="w-3 h-3" />
+                  <span>Main Counter</span>
+                </button>
+                <button
+                  type="button"
+                  id="about-photo-store-btn"
+                  onClick={() => setActivePhoto('store')}
+                  className={`flex-1 py-1.5 px-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
+                    activePhoto === 'store'
+                      ? 'bg-[#8B1D24] text-white shadow-xs'
+                      : 'text-[#5C3F2E] hover:bg-white/60'
+                  }`}
+                >
+                  <Sparkles className="w-3 h-3" />
+                  <span>Displays</span>
+                </button>
+              </div>
+
               {/* Decorative Accent Box */}
-              <div className="absolute -bottom-6 -right-4 sm:-right-6 bg-[#8B1D24] text-white p-5 rounded-2xl shadow-xl max-w-xs">
+              <div className="bg-[#8B1D24] text-white p-4 sm:p-5 rounded-2xl shadow-lg">
                 <p className="font-serif text-base font-bold flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-amber-300" />
                   Barrackpore, WB
                 </p>
                 <p className="text-xs text-amber-100/90 mt-1 leading-relaxed">
-                  Convenient local sweet shop serving Anandapuri & Old Calcutta Road.
+                  Convenient local sweet shop serving Anandapuri & Old Calcutta Road with fresh daily preparations.
                 </p>
               </div>
             </div>

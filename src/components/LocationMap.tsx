@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin, Navigation, ExternalLink, Compass } from 'lucide-react';
+import { MapPin, Navigation, ExternalLink, Compass, Store } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
+import sweetShopFrontImage from '../assets/images/sweet_shop_front_1787856802329.jpg';
 
 export const LocationMap: React.FC = () => {
   /*
@@ -59,18 +60,35 @@ export const LocationMap: React.FC = () => {
                 </div>
               </div>
 
+              {/* Sweet Shop Storefront Photo Visual */}
+              <div className="relative rounded-2xl overflow-hidden border border-[#E8D7C4] shadow-xs group">
+                <img
+                  src={sweetShopFrontImage}
+                  alt="Gopal Sweets sweet shop storefront on Old Calcutta Road in Barrackpore"
+                  className="w-full h-32 sm:h-36 object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+                  <div className="flex items-center gap-1.5 text-white text-xs font-semibold">
+                    <Store className="w-3.5 h-3.5 text-amber-300" />
+                    <span>Look for Gopal Sweets on Old Calcutta Road</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Google Listing Plus Code / Alternate Listing Address */}
-              <div className="p-4 rounded-2xl bg-[#FAF3E7] border border-[#E8D7C4]">
+              <div className="p-3.5 rounded-2xl bg-[#FAF3E7] border border-[#E8D7C4]">
                 <span className="text-[11px] font-semibold text-[#8B1D24] uppercase tracking-wider block">
                   Google Listing Reference Address
                 </span>
-                <p className="text-xs font-medium text-[#4A3223] mt-1">
+                <p className="text-xs font-medium text-[#4A3223] mt-0.5">
                   {BUSINESS_INFO.googleListingAddress}
                 </p>
               </div>
 
               {/* Transit & Landmark info */}
-              <div className="text-xs sm:text-sm text-[#614736] space-y-2">
+              <div className="text-xs sm:text-sm text-[#614736] space-y-1.5">
                 <p className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#8B1D24]" />
                   <span>Located directly on <strong>Old Calcutta Road</strong></span>

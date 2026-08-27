@@ -16,6 +16,8 @@ export interface BusinessInfo {
   googleMapsDirectionsUrl: string;
   googleSearchReviewsUrl: string;
   upiId?: string;
+  shopImage?: string;
+  storefrontImage?: string;
 }
 
 export interface BusinessDayHours {

@@ -1,9 +1,14 @@
-import React from 'react';
-import { Phone, Navigation, UtensilsCrossed, Star, MapPin, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Phone, Navigation, UtensilsCrossed, Star, MapPin, Sparkles, Store, Building2 } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
 import shopCounterImage from '../assets/images/gopal_sweets_counter_1787842684303.jpg';
+import sweetShopFrontImage from '../assets/images/sweet_shop_front_1787856802329.jpg';
 
 export const Hero: React.FC = () => {
+  const [heroImageMode, setHeroImageMode] = useState<'storefront' | 'counter'>('storefront');
+
+  const currentHeroImg = heroImageMode === 'storefront' ? sweetShopFrontImage : shopCounterImage;
+  const currentHeroCaption = heroImageMode === 'storefront' ? 'Gopal Sweets Storefront' : 'Gopal Sweets Counter';
   return (
     <section id="home" className="relative overflow-hidden bg-[#FAF6EE] pt-8 pb-16 md:pt-14 md:pb-24 border-b border-[#EEDFCD]">
       {/* Decorative Traditional Backdrop Motifs */}
@@ -101,21 +106,49 @@ export const Hero: React.FC = () => {
               {/* Decorative Frame */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FDFBF7] bg-[#FAF3E7]">
                 <img
-                  src={shopCounterImage}
-                  alt="Gopal Sweets shop display counter in Barrackpore with fresh sweets and snacks"
+                  src={currentHeroImg}
+                  alt={`${currentHeroCaption} in Barrackpore with fresh sweets and snacks`}
                   className="w-full h-80 sm:h-96 lg:h-[430px] object-cover hover:scale-105 transition-transform duration-700"
                   loading="eager"
                   referrerPolicy="no-referrer"
                 />
                 
                 {/* Gradient vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+
+                {/* Top Photo Switcher Pills */}
+                <div className="absolute top-3.5 right-3.5 flex items-center gap-1.5 bg-black/60 backdrop-blur-md p-1 rounded-full border border-white/20 z-10">
+                  <button
+                    type="button"
+                    onClick={() => setHeroImageMode('storefront')}
+                    className={`px-2.5 py-1 rounded-full text-[11px] font-semibold flex items-center gap-1 transition-all ${
+                      heroImageMode === 'storefront'
+                        ? 'bg-[#8B1D24] text-white shadow-xs'
+                        : 'text-white/80 hover:text-white'
+                    }`}
+                  >
+                    <Building2 className="w-3 h-3" />
+                    <span>Shop</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setHeroImageMode('counter')}
+                    className={`px-2.5 py-1 rounded-full text-[11px] font-semibold flex items-center gap-1 transition-all ${
+                      heroImageMode === 'counter'
+                        ? 'bg-[#8B1D24] text-white shadow-xs'
+                        : 'text-white/80 hover:text-white'
+                    }`}
+                  >
+                    <Store className="w-3 h-3" />
+                    <span>Counter</span>
+                  </button>
+                </div>
                 
                 {/* Photo Caption */}
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <div className="flex items-center justify-between text-xs sm:text-sm">
                     <span className="bg-[#8B1D24]/90 backdrop-blur-xs px-3.5 py-1 rounded-full font-semibold border border-amber-300/30 shadow">
-                      Gopal Sweets Counter • Barrackpore
+                      {currentHeroCaption} • Barrackpore
                     </span>
                     <span className="text-amber-200 font-semibold drop-shadow">
                       Fresh Daily
