@@ -1,0 +1,6 @@
+{
+  "name": "Gopal Sweets - Barrackpore",
+  "description": "Modern and traditional website for Gopal Sweets, an authentic Indian sweets and snacks shop in Barrackpore, West Bengal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Marcellus', 'Rozha One', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FCF9F2;
+    color: #2D1B14;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: var(--font-serif);
+  }
+}
+
+.font-marcellus {
+  font-family: 'Marcellus', Georgia, serif;
+}
+
+.font-rozha {
+  font-family: 'Rozha One', Georgia, serif;
+}
+
+/* Subtle Indian decorative pattern overlay */
+.bg-jharokha-pattern {
+  background-color: #FAF6ED;
+  background-image: radial-gradient(#8B1D24 0.65px, transparent 0.65px), radial-gradient(#D97706 0.65px, #FAF6ED 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  background-opacity: 0.04;
+}
+
+.bg-mandala-subtle {
+  background-image: radial-gradient(circle at center, rgba(139, 29, 36, 0.03) 0%, rgba(250, 246, 237, 0) 70%);
+}
+
+/* Glassmorphic border */
+.border-gold-subtle {
+  border-color: rgba(217, 119, 6, 0.25);
+}
