@@ -434,26 +434,26 @@ export const CUSTOMER_REVIEWS: CustomerReview[] = [
 export const INSTAGRAM_POSTS_PLACEHOLDER = [
   {
     id: 'ig-1',
-    caption: 'Fresh morning batch of traditional sweets in Barrackpore! #GopalSweets #Barrackpore #Sweets',
-    image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?q=80&w=600&auto=format&fit=crop',
-    likes: '48',
+    caption: 'Fresh morning batch of traditional Bengali Rasgullas in Barrackpore! #GopalSweets #Barrackpore #Sweets #Rosogolla',
+    image: rasgullaImage,
+    likes: '84',
   },
   {
     id: 'ig-2',
-    caption: 'Hot tea-time shingara and crispy snacks ready at Old Calcutta Road. #IndianSnacks #Samosa',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=600&auto=format&fit=crop',
-    likes: '62',
+    caption: 'Hot tea-time Bengali shingara (samosa) and crispy snacks ready at Old Calcutta Road. #IndianSnacks #Shingara #Samosa',
+    image: samosaImage,
+    likes: '96',
   },
   {
     id: 'ig-3',
-    caption: 'Celebrating sweet moments with traditional Bengali rasgulla and sandesh. #BengaliSweets',
-    image: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=600&auto=format&fit=crop',
-    likes: '75',
+    caption: 'Pure ghee Kaju Katli & Barfi trays prepared fresh for festivals and celebrations. #KajuKatli #Mithai #GopalSweets',
+    image: kajuKatliBarfiImage,
+    likes: '112',
   },
   {
     id: 'ig-4',
-    caption: 'Special occasion sweet arrangements for family gatherings. Visit us today! #GopalSweets',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600&auto=format&fit=crop',
-    likes: '53',
+    caption: 'Visit our shop counter at Barrackpore for daily fresh sweets, laddus, and savories! #BarrackporeSweets #GopalSweets',
+    image: sweetShopStoreImage,
+    likes: '128',
   },
 ];

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Navigation, MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
+import sweetShopStoreImage from '../assets/images/sweet_shop_store_1787856818608.jpg';
 
 export const CallToActionBanner: React.FC = () => {
   return (
@@ -8,10 +9,11 @@ export const CallToActionBanner: React.FC = () => {
       {/* Background Image with Deep Maroon Overlay */}
       <div className="absolute inset-0 z-0 opacity-25">
         <img
-          src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?q=80&w=1600&auto=format&fit=crop"
-          alt="Traditional Indian Sweets Background"
+          src={sweetShopStoreImage}
+          alt="Gopal Sweets Counter & Sweets Background"
           className="w-full h-full object-cover"
           loading="lazy"
+          referrerPolicy="no-referrer"
         />
       </div>
 
